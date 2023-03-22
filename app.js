@@ -1,1 +1,30 @@
-console.log("hello");
+//template_ulsix04
+//service_lt1og9b
+//yiQK0OfNujiCgNnPB
+
+function contact(event) {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+  loading.classList += " modal__overlay--visible";
+  
+  emailjs
+  .sendForm(
+    'service_lt1og9b',
+    'template_ulsix04',
+    event.target,
+    'yiQK0OfNujiCgNnPB'
+  ).then(() => {
+    loading.classList.remove("modal__overlay--visible");
+    success.classList += " modal__overlay--visible";
+  }).catch(() => {
+    loading.classList.remove("modal__overlay--visible");
+
+    alert(
+      "The email service is temporarily unavailable. Please contact me directly on victor.l.rodas14@gmail.com"
+    );
+  })
+
+  setTimeout(() => {
+  }, 1000)
+}

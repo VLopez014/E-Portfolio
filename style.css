@@ -8,8 +8,9 @@
   scroll-behavior: smooth;
 }
 
-body {
+section {
   background-color: rgb(245, 245, 245);
+  transition: all 400ms ease-in-out;
 }
 
 
@@ -54,6 +55,23 @@ span {
   padding: 0 12px;
 }
 
+nav,
+.scroll,
+.header__container {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header__container {
+  opacity: 0;
+  visibility: visible;
+  transition: all 400ms 200ms;
+}
+
+
 .container {
   width: 100%;
   padding: 50px 0;
@@ -87,8 +105,32 @@ span {
   background-color: #242424;
 }
 
+.dark-theme .header__title,
+.dark-theme .header__para,
+.dark-theme .section__title,
+.dark-theme .nav__anchor,
+.dark-theme .dark__mode,
+.dark-theme .nav__logo--wrapper {
+  color: #FFF;
+}
 
+.dark-theme section {
+  background-color: #242424;
+}
 
+.dark-theme .mail {
+  background-color: #FFF;
+  color: #000;
+}
+
+.dark-theme .scroll__icon {
+  border-color: #FFF;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover--effect--black:after {
+  background-color: #FFF;
+}
 
 
 /* LANDING PAGE */
@@ -135,6 +177,8 @@ nav {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1000px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__title {
@@ -385,11 +429,18 @@ footer {
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
-
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow .5s ease;
+}
+
+.modal--open .modal{
+  z-index: 60;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
@@ -402,13 +453,23 @@ footer {
 
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
+  transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about, 
+.modal--open .modal__contact { 
+  transform: translateX(0%);
 }
 
 .modal__contact {
   position: relative;
   background-color: #242424;
   color: #FFF;
+  transform: translateX(110%);
+  transition: all 300ms ease-in;
 }
+
 
 .modal__heading {
   font-size: 14px;
@@ -548,7 +609,7 @@ footer {
   width: 100%;
   height: 100%;
   
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: -1;
@@ -556,6 +617,8 @@ footer {
 
 .modal__overlay--visible {
   z-index: 1;
+  display: flex;
+
 }
 
 .modal__overlay--loading {

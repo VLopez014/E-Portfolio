@@ -17,6 +17,8 @@
   </script>
   <title>Victor Lopez</title>
 </head>
+
+
 <body>
   <section id="landing-page">
     <nav>
@@ -26,27 +28,27 @@
       </figure>
       <ul class="nav__link--list">
         <li class="nav__link">
-          <a href="" class="
+          <a href="#" class="
           nav__anchor
           link__hover--effect
           link__hover--effect--black">
             Projects
           </a>
         </li>
-        <li class="nav__link">
-          <a href="" class="
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
           nav__anchor
           link__hover--effect
           link__hover--effect--black">
             Contact
           </a>
         </li>
-        <li class="nav__link">
-          <a href="" class="
+        <li class="nav__link" onclick="toggleContrast()">
+          <a href="#" class="
           nav__anchor
           link__hover--effect
           link__hover--effect--black">
-            <i class="fa-solid fa-circle-half-stroke"></i>
+            <i class="fa-solid fa-circle-half-stroke dark__mode"></i>
           </a>
         </li>
       </ul>
@@ -54,14 +56,14 @@
 
     <header class="header__container">
       <h1 class="header__title">Hey</h1>
-      <h1 class="header__title text__color--blue">I'm Victor.</h1>
+      <h1 class="header__title"><span class="text__color--blue">I'm Victor.</span></h1>
       <p class="header__para">
         I'm a <span class="text__color--blue">Frontend Software Engineer</span> with a 
         strong passion for building web applications 
         with great user experiences.
       </p>
       <p class="header__para">
-        Here's a bit more <a href="" class="header__para--link text__color--blue">about me.</a>
+        Here's a bit more <a href="#" class="header__para--link text__color--blue" onclick="toggleModal()">about me.</a>
       </p>
 
       <div class="social__media--links">
@@ -76,12 +78,13 @@
         </a>
       </div>
     </header>
-    <button class="mail click">
-      <i class="fa-solid fa-envelope"></i>
-    </button>
+    
     <a href="#projects" class="scroll">
       <div class="scroll__icon click"></div>
     </a>
+    <button class="mail click" onclick="toggleModal()">
+      <i class="fa-solid fa-envelope"></i>
+    </button>
 
     <div class="modal">
       
@@ -121,7 +124,7 @@
       </div>
       
       <div class="modal__half modal__contact">
-        <i class="fa-regular fa-circle-xmark x__icon click"></i>
+        <i class="fa-regular fa-circle-xmark x__icon click" onclick="toggleModal()"></i>
         <h2>Lets have a chat!</h2>
         <p class="modal__heading">I'm open to new opportunities</p>
 
@@ -291,8 +294,8 @@
               LinkedIn
             </a>
           </li>
-          <li class="footer__links">
-            <a href="" class="
+          <li class="footer__links" onclick="toggleModal()">
+            <a href="#" class="
             footer__link 
             link__hover--effect
             link__hover--effect--white">

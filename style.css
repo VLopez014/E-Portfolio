@@ -8,6 +8,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: rgb(245, 245, 245);
+}
+
 section {
   background-color: rgb(245, 245, 245);
   transition: all 400ms ease-in-out;
@@ -47,7 +51,6 @@ span {
   transform: scale(0.8);
 }
 
-#landing-page,
 .row {
   width: 100%;
   max-width: 1200px;
@@ -141,6 +144,9 @@ nav,
 nav {
   height: 80px;
   padding: 0px 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   
   display: flex;
   justify-content: space-between;

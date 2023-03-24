@@ -205,6 +205,20 @@ nav {
   line-height: 2;
 }
 
+.header__point_icon {
+  font-size: 20px;
+  animation: point 1000ms infinite alternate-reverse;
+}
+
+@keyframes point {
+  0% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-3px);
+  }
+}
+
 .header__para--link {
   font-weight: 500;
 }

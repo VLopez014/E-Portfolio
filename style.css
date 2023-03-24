@@ -135,6 +135,12 @@ nav,
   background-color: #FFF;
 }
 
+.header__container,
+.section__title,
+.project__wrapper {
+  z-index: 20;
+}
+
 
 /* LANDING PAGE */
 #landing-page {
@@ -236,7 +242,7 @@ nav {
   background-color: #1c1d25;
   color: #FFF;
   border-radius: 100px;
-  z-index: 100;
+  z-index: 200;
 }
 
 .scroll {
@@ -370,9 +376,11 @@ nav {
 
 /* FOOTER */
 footer {
+  position: relative;
   padding: 6% 0;
   background-color: #242424;
   color: #FFF;
+  z-index: 100;
 }
 
 .footer__row {
@@ -654,3 +662,155 @@ footer {
     transform: rotate(360deg)
   }
 }
+
+
+
+
+/* SHAPES */
+.shape {
+  position: fixed;
+  z-index: 1;
+}
+
+.shape--0 {
+  top: 15vh;
+  left: 5vw;
+}
+
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
+}
+
+.shape--2 {
+  top: 15vh;
+  left: 80vw;
+}
+
+.shape--3 {
+  top: 40vh;
+  left: 5vw;
+}
+
+.shape--4 {
+  top: 40vh;
+  left: 50vw;
+}
+
+.shape--5 {
+  top: 40vh;
+  left: 80vw;
+}
+
+.shape--6 {
+  top: 80vh;
+  left: 5vw;
+}
+
+.shape--7 {
+  top: 80vh;
+  left: 50vw;
+}
+
+.shape--8 {
+  top: 80vh;
+  left: 80vw;
+}
+
+
+
+@media (max-width: 769px) {
+  .header__title {
+    font-size: 80px;
+  }
+
+  .header__para,
+  .header__para--link {
+    font-size: 20px;
+  }
+
+  .mail {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+
+  .x__icon {
+    font-size: 28px;
+  }
+
+  .shape {
+    width: 20px;
+  }
+}
+
+
+
+
+@media (max-width: 629px) {
+  .project__description {
+    left: 35px;
+  }
+
+  .project__description--title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 460px) {
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--links {
+    margin-top: 12px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .header__title {
+    font-size: 40px;
+  }
+
+  .header__para,
+  .header__para--link {
+    font-size: 16px;
+    max-width: 250px;
+  }
+
+  .shape {
+    width: 12px;
+  }
+
+  .section__title {
+    font-size: 32px;
+  }
+
+  .mail {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+  }
+} 

@@ -206,6 +206,7 @@ nav {
 }
 
 .header__point_icon {
+  margin-left: 12px;
   font-size: 20px;
   animation: point 1000ms infinite alternate-reverse;
 }
@@ -826,5 +827,9 @@ footer {
     font-size: 20px;
     width: 45px;
     height: 45px;
+  }
+
+  .header__point_icon {
+    font-size: 16px;
   }
 } 
